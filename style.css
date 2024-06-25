@@ -1,0 +1,386 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    /* Center the nav */
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header nav .left {
+    flex-grow: 1;
+    font-size: 27px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Hero section styles */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    background: #f0f0f0;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text .highlight {
+    color: #ff6347;
+}
+
+.hero-image img {
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* About, Education, Query sections */
+.about-section,
+.education-section,
+.query-section {
+    padding: 2rem 4rem;
+    background: #fff;
+    text-align: center;
+}
+
+.about-section h1,
+.education-section h1,
+.query-section h1 {
+    margin-bottom: 1rem;
+}
+
+/* Education Qualification section styles */
+.education-section .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.education-section .timeline-item {
+    background: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+}
+
+.education-section .timeline-item img {
+    width: 40px;
+    /* Adjust the width of the icon images */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 1rem;
+    /* Add spacing between icon and text */
+}
+
+
+/* Skills section styles */
+.skills-section {
+    padding: 2rem 4rem;
+    background: #fff;
+    text-align: center;
+}
+
+.skills-section h1 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.skill h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 10px;
+    background: #ff6347;
+    border-radius: 25px;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+}
+
+/* Project list styles */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.project {
+    background: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Experience section */
+.experience-section {
+    padding: 50px 0;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.experience-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience-header h2 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.experience-duration {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.experience-description {
+    margin-top: 10px;
+}
+
+/* Additional Styling for Consistency */
+
+.experience-section h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .experience-list {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .experience-item {
+        width: calc(50% - 15px);
+    }
+}
+
+/* Achievements section */
+.achievements-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.achievements-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.achievement-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+}
+
+.achievement-icon {
+    width: 60px;
+    margin-right: 20px;
+}
+
+.achievement-icon img {
+    max-width: 100%;
+}
+
+.achievement-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.achievement-content p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Additional Styling for Consistency */
+
+.achievements-section h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+
+/* Query form styles */
+.query-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    background: #ff6347;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background: #ff4500;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Footer styles */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 2rem 4rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section h3 {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section p {
+    margin: 0.5rem 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+}
